@@ -1,5 +1,5 @@
 const atividades = [
-  { periodo: "2026, dez", titulo: "Conclusão do curso", descricao: "Conclusão do curso técnico em Informática." },
+  { periodo: "2026, dez (previsto)", titulo: "Conclusão do curso", descricao: "Conclusão do curso técnico em Informática." },
   { periodo: "2026, out", titulo: "FETECMS 2026", descricao: "Segunda participação na Feira de Tecnologias, Engenharias e Ciências de Mato Grosso do Sul" },
   { periodo: "2026, out", titulo: "FECINOVA 2026", descricao: "Segunda participação na Feira de Ciências e Tecnologia de Nova Andradina" },
   { periodo: "2026, out", titulo: "Monitoria", descricao: "Atuação como monitor na disciplina de Matemática 2." },
@@ -12,15 +12,15 @@ const atividades = [
 ];
 
 const projetos = [
-  { nome: "ANDAIO", descricao: "Validação de um novo método de análise da qualidade interna de ovos de galinha de maneira não destrutiva", participacao: "Minha participação: Analise convencional, tabulação, pesquisa e etc.", tecnologias: ["Agrárias", "Engenharias", "Image J"] },
-  { nome: "Tradução-Automatica", descricao: "Programação de um sistema de tradução automática da língua Terena para o português com Python", participacao: "Minha participação: Front-end, Construção do banco de dados, validação.", tecnologias: ["Python", "Git", "VS Code"] }
+  { nome: "ANDAIO", descricao: "Validação de um novo método de análise da qualidade interna de ovos de galinha de maneira não destrutiva.", participacao: "Minha participação: Análises convencionais, tabulação de dados e pesquisa.", tecnologias: ["Agrárias", "Engenharias", "ImageJ", "Tinkercad"] },
+  { nome: "Tradução-Automatica", descricao: "Programação de um sistema de tradução automática da língua Terena para o português com Python.", participacao: "Minha participação: Front-end, Construção do banco de dados, validação.", tecnologias: ["Python", "Git", "VS Code", "Streamlit"] }
 ];
 
 const eventos = [
-  { data: "Out/2026", nome: "FETECMS 2026", descricao: "Apresentação do ANDAIO por Giovana, Manuela e Sergio", premio: "" },
-  { data: "Out/2026", nome: "FECINOVA 2026", descricao: "Apresentação do ANDAIO, equipe completa", premio: "3º lugar na categoria Ciências Agrárias e Engenharias" },
-  { data: "Out/2025", nome: "FECINOVA 2025", descricao: "Participação como expositor com o projeto Tradução-Automatica.", premio: "3º lugar na categoria Multidisciplinar" },
-  { data: "Out/2025", nome: "FETECMS 2025", descricao: "Participação como expositor com o projeto Tradução-Automatica.", premio: "3º lugar na categoria Linguagens", premioExtra: "Expedição Científica Pantanal Cerrado " }
+  { data: "Out/2026", nome: "FETECMS 2026", descricao: "Apresentação do ANDAIO por Giovana, Manuela e Sergio.", premio: "" },
+  { data: "Out/2026", nome: "FECINOVA 2026", descricao: "Apresentação do ANDAIO, equipe completa.", premio: "3º lugar na categoria Ciências Agrárias e Engenharias" },
+  { data: "Out/2025", nome: "FECINOVA 2025", descricao: "Participação como expositor com o projeto Tradução Automática.", premio: "3º lugar na categoria Multidisciplinar" },
+  { data: "Out/2025", nome: "FETECMS 2025", descricao: "Participação como expositor com o projeto Tradução Automática.", premio: "3º lugar na categoria Linguagens", premioExtra: "Premio: Expedição Científica Pantanal Cerrado " }
 ];
 
 const sites = [
@@ -30,7 +30,7 @@ const sites = [
 
 const habilidades = [
   { grupo: "Linguagens e web", itens: ["HTML", "CSS", "JavaScript", "Python"] },
-  { grupo: "Ferramentas", itens: ["Git", "GitHub", "VS Code", "Figma"] },
+  { grupo: "Ferramentas", itens: ["Git", "GitHub", "VS Code", "Figma", "ImageJ", "Tinkercad"] },
   { grupo: "Outras", itens: ["Trabalho em equipe", "Comunicação", "Organização", "Pesquisa Científica"] }
 ];
 
@@ -60,7 +60,7 @@ document.getElementById("listaSites").innerHTML = sites.map(s => `
     <div class="corpo">
       <h3>${s.nome}</h3>
       <p>${s.descricao}</p>
-      <a href="${s.link}" target="_blank" rel="noopener">Visitar site</a>
+      <a href="${s.link}" target="_blank" rel="noopener">Ver no GitHub</a>
     </div>
   </article>`).join("");
 
@@ -88,4 +88,3 @@ const observador = new IntersectionObserver(entradas => {
   });
 }, { rootMargin: "-40% 0px -55% 0px" });
 document.querySelectorAll("main section[id]").forEach(s => observador.observe(s));
-fe
