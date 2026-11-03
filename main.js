@@ -1,19 +1,19 @@
 const atividades = [
   { periodo: "2026, dez (previsto)", titulo: "Conclusão do curso", descricao: "Conclusão do curso técnico em Informática." },
-  { periodo: "2026, out", titulo: "FETECMS 2026", descricao: "Segunda participação na Feira de Tecnologias, Engenharias e Ciências de Mato Grosso do Sul" },
-  { periodo: "2026, out", titulo: "FECINOVA 2026", descricao: "Segunda participação na Feira de Ciências e Tecnologia de Nova Andradina" },
+  { periodo: "2026, out", titulo: "FETECMS 2026", descricao: "Segunda participação na Feira de Tecnologias, Engenharias e Ciências de Mato Grosso do Sul." },
+  { periodo: "2026, out", titulo: "FECINOVA 2026", descricao: "Segunda participação na Feira de Ciências e Tecnologia de Nova Andradina." },
   { periodo: "2026, out", titulo: "Monitoria", descricao: "Atuação como monitor na disciplina de Matemática 2." },
   { periodo: "2026, jan", titulo: "Projeto ANDAIO", descricao: "Participação no projeto ANDAIO, no Laboratório de Geoprocessamento e Agricultura de Precisão (LAGAP)." },
-  { periodo: "2025, out", titulo: "FECINOVA 2025", descricao: "Primeira participação na Feira de Ciências e Tecnologia de Nova Andradina" },
-  { periodo: "2025, out", titulo: "FETECMS 2025", descricao: "Primeira participação na Feira de Tecnologias, Engenharias e Ciências de Mato Grosso do Sul" },
-  { periodo: "2025, fev", titulo: "Projeto Tradução-Automatica", descricao: "Bolsista no projeto de tradução automática da língua Terena utilizando Python." },
+  { periodo: "2025, out", titulo: "FECINOVA 2025", descricao: "Primeira participação na Feira de Ciências e Tecnologia de Nova Andradina." },
+  { periodo: "2025, out", titulo: "FETECMS 2025", descricao: "Primeira participação na Feira de Tecnologias, Engenharias e Ciências de Mato Grosso do Sul." },
+  { periodo: "2025, fev", titulo: "Projeto Tradução Automática", descricao: "Bolsista no projeto de tradução automática da língua Terena utilizando Python." },
   { periodo: "2024, fev", titulo: "Início do curso", descricao: "Primeiro contato com o curso e o Instituto Federal." }
 
 ];
 
 const projetos = [
-  { nome: "ANDAIO", descricao: "Validação de um novo método de análise da qualidade interna de ovos de galinha de maneira não destrutiva.", participacao: "Minha participação: Análises convencionais, tabulação de dados e pesquisa.", tecnologias: ["Agrárias", "Engenharias", "ImageJ", "Tinkercad"] },
-  { nome: "Tradução-Automatica", descricao: "Programação de um sistema de tradução automática da língua Terena para o português com Python.", participacao: "Minha participação: Front-end, Construção do banco de dados, validação.", tecnologias: ["Python", "Git", "VS Code", "Streamlit"] }
+  { nome: "ANDAIO", descricao: "Validação de um novo método de análise da qualidade interna de ovos de galinha de maneira não destrutiva", participacao: "Minha participação: Análise convencional, tabulação de dados, pesquisa e etc.", tecnologias: ["Agrárias", "Engenharias", "ImageJ", "Tinkercad"] },
+  { nome: "Tradução Automática", descricao: "Programação de um sistema de tradução automática da língua Terena para o português com Python", participacao: "Minha participação: Front-end, Construção do banco de dados, validação.", tecnologias: ["Python", "Git", "VS Code", "streamlit"] }
 ];
 
 const eventos = [
@@ -30,10 +30,15 @@ const sites = [
 
 const habilidades = [
   { grupo: "Linguagens e web", itens: ["HTML", "CSS", "JavaScript", "Python"] },
-  { grupo: "Ferramentas", itens: ["Git", "GitHub", "VS Code", "Figma", "ImageJ", "Tinkercad"] },
+  { grupo: "Ferramentas", itens: ["Git", "GitHub", "VS Code", "Figma", "Tinkercad"] },
   { grupo: "Outras", itens: ["Trabalho em equipe", "Comunicação", "Organização", "Pesquisa Científica"] }
 ];
 
+
+const galeria = [
+  { imagem: "img/equipe-fecinova.jpg", legenda: "ANDAIO na FECINOVA", alt: "Giovana, Manuela, Larissa e Sergio na FECINOVA" },
+  { imagem: "img/equipe-fetecms.jpg", legenda: "Equipe LAGAP na FETECMS", alt: "Grupo de finalistas do LAGAP posando diante do painel da XVI FETECMS" }
+];
 
 const etiquetas = lista => `<div class="etiquetas">${lista.map(t => `<span class="etiqueta">${t}</span>`).join("")}</div>`;
 
@@ -66,6 +71,9 @@ document.getElementById("listaSites").innerHTML = sites.map(s => `
 
 document.getElementById("listaHabilidades").innerHTML = habilidades.map(h => `
   <div class="card"><h3>${h.grupo}</h3>${etiquetas(h.itens)}</div>`).join("");
+
+document.getElementById("listaGaleria").innerHTML = galeria.map(g => `
+  <figure><img src="${g.imagem}" alt="${g.alt}" loading="lazy"><figcaption>${g.legenda}</figcaption></figure>`).join("");
 
 document.getElementById("ano").textContent = new Date().getFullYear();
 
