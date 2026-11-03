@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sergio Horta da Silva Júnior | Portfólio acadêmico</title>
+  <meta name="description" content="Portfólio acadêmico de Sergio Horta da Silva Júnior: trajetória, projetos, eventos e sites desenvolvidos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo__barra">
+      <a class="marca" href="#sobre">Sergio Horta da Silva Júnior</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" class="menu" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#atividades">Atividades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#sites">Sites</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre" class="hero container">
+      <div class="hero__texto">
+        <p class="ola">Olá, eu sou</p>
+        <h1>Sergio Horta</h1>
+        <p class="hero__meta">Curso Técnico em Informática no Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul.</p>
+        <p>Ingressei no curso técnico em busca de novas oportunidades e atraído pela vivência da comunidade acadêmica, onde descobri o prazer de aprender fazendo. Pretendo cursar Engenharia de Controle e Automação e usar o que aprendi e aprenderei para resolver problemas de forma criativa e eficiente. Este portfólio reúne os primeiros passos dessa trajetória.</p>
+        <div class="botoes">
+          <a class="botao" href="#projetos">Ver projetos</a>
+          <a class="botao botao--suave" href="#contato">Fale comigo</a>
+        </div>
+      </div>
+      <div class="foto" aria-hidden="false">
+        <span class="foto__iniciais">SH</span>
+        <img src="img/foto.jpg" alt="Foto de Sergio Horta">
+      </div>
+    </section>
+
+    <section id="atividades" class="secao container">
+      <h2>Atividades acadêmicas</h2>
+      <p class="secao__intro">Trabalhos, cursos e outras atividades da minha trajetória.</p>
+      <ol class="linha" id="listaAtividades"></ol>
+    </section>
+
+    <section id="projetos" class="secao container">
+      <h2>Projetos</h2>
+      <p class="secao__intro">O que desenvolvi e qual foi a minha participação em cada um.</p>
+      <div class="grade" id="listaProjetos"></div>
+    </section>
+
+    <section id="eventos" class="secao container">
+      <h2>Feiras e eventos</h2>
+      <p class="secao__intro">Participações, apresentações e premiações.</p>
+      <ul class="eventos" id="listaEventos"></ul>
+    </section>
+
+    <section id="sites" class="secao container">
+      <h2>Sites desenvolvidos</h2>
+      <p class="secao__intro">Alguns trabalhos publicados. Clique para visitar.</p>
+      <div class="grade" id="listaSites"></div>
+    </section>
+
+    <section id="habilidades" class="secao container">
+      <h2>Habilidades</h2>
+      <div class="habilidades" id="listaHabilidades"></div>
+    </section>
+
+    <section id="contato" class="secao container">
+      <div class="contato">
+        <h2>Vamos conversar?</h2>
+        <p>Estou aberto a estágios, projetos em grupo e trocas de ideias.</p>
+        <div class="botoes">
+          <a class="botao" href="mailto:sergiohorta@gmail.com">sergiohorta@gmail.com</a>
+          <a class="botao botao--suave" href="https://github.com/sergiohorta" target="_blank" rel="noopener">GitHub</a>
+          <a class="botao botao--suave" href="https://www.linkedin.com/in/sergiohorta" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape container">
+    <p>© <span id="ano"></span> Sergio Horta da Silva Júnior. Feito com HTML, CSS e JavaScript.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
